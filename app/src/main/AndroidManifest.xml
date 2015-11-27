@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.owner.MyMovies">
+
+    <permission android:name="com.example.owner.MyMovies.provider.READWRITE" />
+
+    <uses-permission android:name="com.example.owner.MyMovies.provider.READWRITE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/movie_logo"
+        android:label="MyMovies"
+        android:theme="@android:style/Theme.WithActionBar">
+        <activity
+            android:name="com.example.owner.MyMovies.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.owner.MyMovies.MainActivity"
+            android:label="MyMovies">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name="com.example.owner.MyMovies.AddActivity"
+            android:label="@string/add_movie_title"
+            android:parentActivityName="com.example.owner.MyMovies.MainActivity" />
+
+        <activity
+            android:name="com.example.owner.MyMovies.EditActivity"
+            android:label="@string/edit_movie_title"
+            android:parentActivityName="com.example.owner.MyMovies.MainActivity" />
+
+        <activity
+            android:name="com.example.owner.MyMovies.SearchActivity"
+            android:label="@string/search_movie_title"
+            android:parentActivityName="com.example.owner.MyMovies.MainActivity" />
+
+        <provider
+            android:name="com.example.owner.MyMovies.MovieProvider"
+            android:authorities="com.example.owner.MyMovies.provider"
+            android:exported="true"
+            android:readPermission="com.example.owner.MyMovies.provider.READWRITE"
+            android:writePermission="com.example.owner.MyMovies.provider.READWRITE" />
+    </application>
+
+</manifest>

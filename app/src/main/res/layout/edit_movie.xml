@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="110dp"
+        android:text="EDIT MOVIE"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/movieName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Movie Name"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/movieGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Genre eg.Drama,Comedy etc."
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/movieRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rating (0-5)"
+        android:inputType="number"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/movieSeen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Seen/Unseen"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+
+</LinearLayout>
